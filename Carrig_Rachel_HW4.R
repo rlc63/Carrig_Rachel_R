@@ -54,49 +54,80 @@ print(e) #we print out our variable
 # QUESTION 4
 # a)
 f <-c(10:100)
+#first we define variable f so that it's the integers between 10-100
 sum(f^3+4*f^2)
+#we then take the sum as described using our variable f
 # b)
 g <- 1:25
+#first we defie a variable g as integers between 1 and 25
 sum((2^g)/g + 3^g/(g))
+#we then take the sum as described using our variable g
 
 # QUESTION 5
 # a)
 paste("label", sep = " ", 1:30)
+#here, the first part of our paste is the word label, then we use
+#a separator to add a space between that and the integers 1-30
 # b)
 paste("fn", sep = "", 1:30)
+#here, the first part is fn, and then we want the integers 1-30
+#to be directly following the fn, without a space, so we have the 
+#separater be nothing
 
 #QUESTION 6
+#first, we copy what is given
 set.seed(50)
 xVec <- sample(0:999, 250, replace=T)
 yVec <- sample(0:999, 250, replace=T)
 # a)
 yVec[-1] - xVec[-length(xVec)]
+#we take the second yVec, and subtract the value of the first xVec
+#and continue in that sequence
 # b)
 sin(yVec[-length(yVec)]) / cos(xVec[-1])
+#here, we take the sin of the first yVec length divided by the second xVec 
+#and continue in that sequence
 # c)
 xVecLen <- length(xVec)
+#first, we define the variable xVecLen to be the length of xVec
 xVec[-c(xVecLen-1,xVecLen)] + 2*xVec[-c(1,xVecLen)] - xVec[-c(1,2)]
+#then, we proceed to evaluate the function as described
 # d)
 sum(exp(-xVec[-1])/(xVec[-length(xVec)]+10))
+#here we calculate the sum of the described equation using the sum function
 
 #QUESTION 7
 # a)
 yVec[yVec>600]
+#we take the values of yVec that are greater than 600
 # b) 
-s = c(yVec)
-s[yVec>600]
+which(yVec>600)
+#we want to know the positions of those in a, so we use the which
+#function to find those positions
 # c)
 xVec[yVec>600]
+#here, we take the values in xVec corresponding to those in yVec
+#that are greater than 600
 # d)
 sqrt(abs(xVec-mean(xVec)))
+#here, we take the square root of the absolute values of what's 
+#described using those built-in functions
 # e)
 sum( yVec>max(yVec)-200 )
+#here, we sum together the "TRUE" values as given in the function
+#such that they are within 200 of the maximum value
 # f)
 sum(xVec%%2==0)
+#using the given operator, we determine which fit the description and
+#add the total number of true's together
 # g)
 xVec[order(yVec)]
+#here we order the xVec values so that they match the yVec value
 # h)
 yVec[c(T,F,F)]
+#here we pick out every third element in yVec using true/false
 
 # QUESTION 8
 sum(cumprod(seq(2,38,b=2)/seq(3,39,b=2)))+1
+#here we take the sum of the above sequence, and then add one to it
+#to get the desired sum
