@@ -12,6 +12,7 @@ a <- c(1:20)
 #this defines the variable a, which is the integers 1 through 20 in that order
 ```{r}
 print (a) 
+--George: R is different from Python. You don't need to print, just type the variable name
 ```
 #we print out our variable 
 
@@ -208,6 +209,7 @@ xVec[order(yVec)]
 ```{r}
 yVec[c(T,F,F)]
 #here we pick out every third element in yVec using true/false
+#Comment: This is unique method, good idea
 ```
 # QUESTION 8
 ```{r}
