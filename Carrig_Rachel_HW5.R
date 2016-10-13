@@ -104,11 +104,7 @@ print(apply(sapply(df,is.na), 2, sum))
 
 #PART 2) - loop through any dataframe and determine the percentage of rows containing an NA in any of the columns.
 
-paste(sum(rowSums(is.na(df)>0))/nrow(df),sep="","%")
-
-#here, we take the the sum of the rows where there is at least one NA in the dataframe.
-#we then sum together 
-
+paste(sum(!complete.cases(df))/nrow(df),sep="","%")
 
 employee <- c(7,24, NA)
 salary <- c(21000, 2, NA)
@@ -119,4 +115,3 @@ print(employ.data)
 length(row(is.na(employ.data)))
 is.na(employ.data)
 
-sapply(employ.data, nrow(is.na()))
