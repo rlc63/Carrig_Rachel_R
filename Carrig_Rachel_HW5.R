@@ -18,18 +18,14 @@ df = data.frame(diamonds)
 attributes({df}) #this lists out the attributes of the dataframe
 #parameters are a dataframe, and the return is the attributes
 
+methods(class = "data.frame") #this prints the methods associated with
+#a dataframe. parameters are a dataframe and the return is the methods.
+
 str(df) #this displays the internal structure of the dataframe
 #parameters are a dataframe, and the return is its internal structure
 
 summary(df) #this provides descriptive statistics of the dataframe
 #parameters are a dataframe, and the return is its descriptive statistics
-
-methods(class = "data.frame")
-print(methods(class = df))#this prints the methods within the dataframe
-#parameters are a dataframe, and the return is its methods
-
-####????class(diamonds) #use class() function to get all classes associated with the diamonds dataframe. The diamonds dataframe has three classes: tbl_df, tbl, data.frame
-####????methods(class=class(diamonds)) 
 
 #PART 2) Write code to determine the number of columns in a dataframe
 ncol(df) 
@@ -105,13 +101,8 @@ print(apply(sapply(df,is.na), 2, sum))
 #PART 2) - loop through any dataframe and determine the percentage of rows containing an NA in any of the columns.
 
 paste(sum(!complete.cases(df))/nrow(df),sep="","%")
-
-employee <- c(7,24, NA)
-salary <- c(21000, 2, NA)
-startdate <- as.Date(c('2010-11-1','2008-3-25','2007-3-14'))
-
-employ.data <- data.frame(employee, salary, startdate)
-print(employ.data)
-length(row(is.na(employ.data)))
-is.na(employ.data)
-
+#starting from the inside, we use the opposite (!) of complete cases to get the rows with NA
+#in our dataframe. we then take the sum to get the number of those rows. then, we divide by the total
+#number of rows in our dataframe to get the percentage. finally, we paste together the percentage with a %
+#symbol, with no separator so that the number appears with the %.
+#the parameters are dataframes and the result is a percentage of the rows that have NAs
