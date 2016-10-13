@@ -18,8 +18,8 @@ df = data.frame(diamonds)
 attributes({df}) #this lists out the attributes of the dataframe
 #parameters are a dataframe, and the return is the attributes
 
-methods(class = "data.frame") #this prints the methods associated with
-#a dataframe. parameters are a dataframe and the return is the methods.
+print(methods(class = class(df))) #this prints the methods associated with our dataframe. 
+#parameters are a dataframe and the return is the methods.
 
 str(df) #this displays the internal structure of the dataframe
 #parameters are a dataframe, and the return is its internal structure

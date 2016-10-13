@@ -7,3 +7,4 @@ data("diamonds")
 #QUESTION 1 - 
 numdf <- sapply(diamonds, is.numeric)
 hist(numdf)
+geom = "histogram"
