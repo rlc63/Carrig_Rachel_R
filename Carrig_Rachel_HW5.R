@@ -1,3 +1,5 @@
+#Overall Comment: Good Exercise especially the understanding of sapply and lapply function!
+
 #before beginning, I require the ggplot2 so that we can use the diamonds dataset
 require(ggplot2)
 
@@ -27,11 +29,12 @@ str(df) #this displays the internal structure of the dataframe
 summary(df) #this provides descriptive statistics of the dataframe
 #parameters are a dataframe, and the return is its descriptive statistics
 
+#George: Good use of various functions to show necessary information about the dataset
+
 #PART 2) Write code to determine the number of columns in a dataframe
 ncol(df) 
 #this prints the number of columns in the dataframe
 #parameters are a dataframe and the return is an integer totaling its number of columns
-
 
 #---
 #QUESTION 2 - determine how many rows are in a dataframe
