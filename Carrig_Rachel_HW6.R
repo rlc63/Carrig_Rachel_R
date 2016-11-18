@@ -1,3 +1,6 @@
+#Overall Comments: Good Exercise! I see your understanding in your code and explanations. And I suggested some points you should
+#pay attention in the future. If you have any questions, please feel free to contact me.
+
 require(ggplot2)
 #we first require ggplot2, which we will use to manipulate the data
 data("diamonds")
@@ -57,6 +60,10 @@ zhist + geom_histogram(bins = 60) + ggtitle("Z Histogram") + xlim(2, 6)
 #using xlim to remove the outliers  from the histogram.  To view the full histogram, 
 #remove the + xlim(2, 6)
 
+#Comments: I do see this way works. But I suggest you to get a simple way. You can first filter out the numeric columns and
+#design a loop to plot the histograms. Actually the process you coded above can be writen as a loop since only the variable
+#change and all other format keep same. You don't lose points here.
+
 
 #---
 #QUESTION 2 - Create a simple scatter plot of Weight and Price using Color as a facet.
@@ -69,6 +76,10 @@ scat <- scat + geom_point() + ggtitle("Diamonds - Weight to Price by Color") + x
 scat <- scat + ylab("Price") + labs(colour = "factor(color)")
 print(scat) #finally, we print the result
 
+#Comments: Yes, this do works and I also can see you really understand the layer plot thought of ggplot. In order to improve,
+# I suggest one better format for you:
+ggplot(diamonds,aes(carat,price))+geom_point(aes(color=factor(color)))+labs(title="Diamonds-Weight to Price by Color",x='Weight',y='Price')
+#This code is more readable and clear.
 
 #---
 #QUESTION 3 - remove the non-linearity and replot
